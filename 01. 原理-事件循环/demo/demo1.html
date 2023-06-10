@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head></head>
+
+<body>
+  <h1>这是一个事件循环</h1>
+  </h1>
+  <button>点击改变</button>
+  <script>
+    var h1 = document.querySelector('h1');
+    var btn = document.querySelector('button');
+
+    // 死循环指定的时间,下面设置了三秒延时
+    function delay(duration) {
+      var start = Date.now();
+      while (Date.now() - start < duration) { }
+    }
+    //给按钮注册一个点击事件
+    btn.onclick = function () {
+      h1.textContent = '你是傻逼！';
+      delay(3000);
+    };
+  </script>
+</body>
+
+</html>
